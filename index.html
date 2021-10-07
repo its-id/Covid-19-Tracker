@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@300;400;700;900&family=Lora:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&family=Roboto+Slab:wght@400;700&family=Source+Sans+Pro:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Covid-19 Tracker</title>
+  </head>
+
+  <body>
+    <h1>Live Covid-19 Tracker</h1>
+    <main class="title_info">
+      <div class="totalCases_overall">
+        <span>Total Cases </span>
+        <span class="totalCases_number fs-big clr-acnt">12324</span>
+      </div>
+      <div class="activeCases_overall">
+        <span>Active Cases </span>
+        <span class="activeCases_number fs-big clr-acnt">1231</span>
+      </div>
+      <div class="totalDeaths_overall">
+        <span>Total Deaths </span>
+        <span class="totalDeaths_number fs-big clr-acnt">12342</span>
+      </div>
+      <div class="totalRecovered_overall">
+        <span>Total Recovered </span>
+        <span class="totalRecovered_number fs-big clr-acnt">12412</span>
+      </div>
+    </main>
+
+    <div class="formContainer">
+      <span class="search_title">Search By Country: </span>
+      <select class="cities"></select>
+      <button class="button">Get Details</button>
+    </div>
+
+    <div class="countryDetails">
+      <!-- <div class="countryName clr-acnt"></div>
+      <div class="newConfirmed_div">
+        <span>Active Cases </span>
+        <span class="newConfirmed clr-acnt"></span>
+      </div>
+      <div class="totalConfirmed_div">
+        <span>Total Confirmed </span>
+        <span class="totalConfirmed clr-acnt"></span>
+      </div>
+      <div class="totalDeaths_div">
+        <span>Total Deaths </span>
+        <span class="totalDeaths clr-acnt"></span>
+      </div>
+      <div class="totalRecovered_div">
+        <span>Total Recovered: </span>
+        <span class="totalRecovered clr-acnt"></span>
+      </div> -->
+    </div>
+
+    <footer>
+      <span>Live Tracking with Covid19API.com</span>
+      <br />
+      <span style="color: var(--clr-accent)">Made By: Indrakant Dana</span>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

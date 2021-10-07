@@ -1,0 +1,191 @@
+:root {
+  --ff-primary: "Poppins", sans-serif;
+  --ff-secondary: "Source Code Pro", sans-serif;
+  --fw-reg: 300;
+  --fw-med: 600;
+  --fw-bold: 700;
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #16e0bd;
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+* {
+  font-family: var(--ff-primary);
+  color: var(--clr-light);
+}
+body {
+  background: var(--clr-dark);
+  /* margin: 1%; */
+  box-sizing: border-box;
+}
+
+/* FONT COLORS */
+.clr-acnt {
+  color: var(--clr-accent) !important;
+}
+
+.clr-drk {
+  color: var(--clr-dark) !important;
+}
+
+/* FONT SIZES */
+.fs-big {
+  font-size: 2.5em;
+}
+
+h1 {
+  font-weight: var(--fw-bold);
+  text-align: center;
+  font-size: var(--fs-h1);
+}
+
+.title_info {
+  display: flex;
+  /* width: 100%; */
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 2%;
+  margin: 2% auto;
+  border-top: 5px solid var(--clr-accent);
+  border-bottom: 5px solid var(--clr-accent);
+}
+
+.title_info div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2%;
+  /* border: 1px solid red; */
+}
+
+.title_info div > span {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+}
+
+.formContainer {
+  display: flex;
+  margin: 5px auto;
+  justify-content: space-around;
+  align-items: center;
+}
+.formContainer span {
+  text-align: center;
+  font-size: var(--fs-h3);
+}
+select {
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  padding: 10px;
+}
+button {
+  padding: 10px;
+  border: none;
+  background: var(--clr-accent);
+}
+button:hover {
+  box-shadow: 0 0 5px #16e0bd;
+}
+
+@media (max-width: 560px) {
+  * {
+    font-size: 1rem !important;
+  }
+  .title_info {
+    flex-flow: column;
+  }
+  .title_info div {
+    width: 80%;
+  }
+  .formContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .formContainer * {
+    margin: 2%;
+  }
+}
+
+.countryDetails {
+  display: none;
+  grid-template-areas:
+    "header header"
+    "activeCases totalCases"
+    "totalDeaths totalRecovered";
+  /* border: 1px solid black; */
+  background: rgba(8, 8, 8, 0.2);
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.countryName {
+  font-weight: 600;
+  font-size: 3rem !important;
+  padding: 0% !important;
+  text-transform: uppercase;
+  grid-area: header;
+  /* border: 1px solid red; */
+}
+.countryDetails > div {
+  /* border: 1px solid red; */
+  border-radius: 5px;
+  font-weight: var(--fw-med);
+  padding: 3%;
+  margin: 3%;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-h3);
+}
+.newConfirmed_div {
+  grid-area: activeCases;
+  background: rgba(47, 201, 247, 0.8);
+}
+.totalConfirmed_div {
+  grid-area: totalCases;
+  background: rgba(255, 75, 51, 0.8);
+}
+.totalDeaths_div {
+  grid-area: totalDeaths;
+  background: rgba(135, 0, 5, 0.8);
+}
+.totalRecovered_div {
+  grid-area: totalRecovered;
+  background: rgba(22, 224, 189, 0.8);
+}
+
+footer {
+  margin: 4% 0 1% 0;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .title_info div > span {
+    font-size: var(--fs-h2);
+  }
+
+  .countryDetails {
+    display: none;
+    width: 70%;
+    margin: 3% auto;
+    border: 1px solid cyan;
+  }
+
+  /* footer {
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+    text-align: center;
+  } */
+}
